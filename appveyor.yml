@@ -1,0 +1,24 @@
+image: Visual Studio 2017
+init:
+  - git config --global core.autocrlf true
+install:
+  - ps: $env:BuildNumber= $env:APPVEYOR_BUILD_NUMBER
+  - ps: $env:DOTNET_SKIP_FIRST_TIME_EXPERIENCE = true
+  - ps: $env:NUGET_XMLDOC_MODE = "skip"
+  - ps: $env:DOTNET_CLI_TELEMETRY_OPTOUT = 1
+build_script:
+  - dotnet --version
+  - dotnet restore
+  - dotnet build -c Release
+  - dotnet pack -c Release
+artifacts:
+  - path: 'src\**\*.nupkg'
+deploy:
+  - provider: NuGet
+    on:
+      branch: master
+    server: https://www.myget.org/F/davidhayden-ci/api/v2/package
+    api_key:
+      secure: zO9VvXdyZxlJe4oXgfO5NBtulXZUZ5YWLvI+YoKn0TFW7mq7hL/GZuxt1O2t7D7K
+    skip_symbols: true
+    artifact: /.*\.nupkg/

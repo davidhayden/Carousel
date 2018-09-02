@@ -1,0 +1,15 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+    <PropertyGroup>
+        <PackageId>Carousel.OrchardCore</PackageId>
+        <Title>Carousel Module for Orchard Core</Title>
+        <Description>Adds a Bootstrap 4 Carousel Widget.</Description>
+        <PackageTags>Carousel;OrchardCore</PackageTags>
+        <VersionPrefix>1.0.0</VersionPrefix>
+        <VersionSuffix>beta2</VersionSuffix>
+    </PropertyGroup>
+
+    <!-- Called after so that the <VersionSuffix> is built after the local ones -->
+    <Import Project="Common.props"/>
+
+</Project>

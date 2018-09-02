@@ -1,0 +1,42 @@
+{% assign id = "carousel-" + Model.ContentItem.Id %}
+{% assign ride = Model.ContentItem.Content.Carousel.Ride.Value %}
+{% assign wrap = Model.ContentItem.Content.Carousel.Wrap.Value %}
+{% assign interval = Model.ContentItem.Content.Carousel.Interval.Value %}
+{% assign keyboard = Model.ContentItem.Content.Carousel.Keyboard.Value %}
+{% assign pause = Model.ContentItem.Content.Carousel.Pause.Value %}
+
+<div id="{{ id }}" class="carousel slide" data-interval="{{ interval }}"{% if ride %} data-ride="carousel"{% endif %}{% if wrap == false %} data-wrap="false"{% endif %}{% if pause == false %} data-pause="false"{% endif %}{% if keyboard == false %} data-keyboard="false"{% endif %}>
+    {% if Model.ContentItem.Content.Carousel.IncludeIndicators.Value %}
+        <ol class="carousel-indicators">
+            {% assign slideTo = 0 %}
+            {% for slide in Model.ContentItem.Content.Slides.ContentItems %}
+                <li data-target="#{{ id }}" data-slide-to="{{ slideTo }}"{% if slideTo == 0 %} class="active"{% endif %}></li>
+                {% assign slideTo = slideTo + 1 %}
+            {% endfor %}
+        </ol>
+    {% endif %}
+    <div class="carousel-inner">
+        {% assign active = " active" %}
+        {% for slide in Model.ContentItem.Content.Slides.ContentItems %}
+            <div class="carousel-item{{active}}">
+                <img{% if slide.Slide.ImageClass.Text.size > 0 %} class="{{ slide.Slide.ImageClass.Text }}"{% endif %} src="{{ slide.Slide.Image.Paths.first | asset_url }}"{% if slide.Slide.ImageAltText.Text.size > 0 %} alt="{{ slide.Slide.ImageAltText.Text }}"{% endif %}>
+                {% if slide.Slide.DisplayCaption.Value %}
+                    <div class="carousel-caption d-none d-md-block">
+                        {{ slide.Slide.Caption.Html | raw }}
+                    </div>
+                {% endif %}
+            </div>
+            {% assign active = "" %}
+        {% endfor %}
+    </div>
+    {% if Model.ContentItem.Content.Carousel.IncludeControls.Value %}
+        <a class="carousel-control-prev" href="#{{ id }}" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#{{ id }}" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    {% endif %}
+</div>
