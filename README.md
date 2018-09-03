@@ -4,7 +4,7 @@ Carousel.OrchardCore is an Orchard Core CMS Module that creates a Boostrap 4 Car
 
 ## Status
 
-[![Build status](https://ci.appveyor.com/api/projects/status/37sx3os9h1x2vxuq?svg=true)](https://ci.appveyor.com/project/davidhayden/carousel) [![Status](https://img.shields.io/myget/davidhayden-ci/v/Carousel.OrchardCore.svg)](https://www.myget.org/feed/davidhayden-ci/package/nuget/Freelancer.OrchardCore)
+[![Build status](https://ci.appveyor.com/api/projects/status/37sx3os9h1x2vxuq?svg=true)](https://ci.appveyor.com/project/davidhayden/carousel) [![Status](https://img.shields.io/myget/davidhayden-ci/v/Carousel.OrchardCore.svg)](https://www.myget.org/feed/davidhayden-ci/package/nuget/Carousel.OrchardCore)
 
 ## Getting Started
 
