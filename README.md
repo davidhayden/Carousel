@@ -12,15 +12,15 @@ The module expects Bootstrap 4 to be used by the Orchard Core CMS website. The m
 
 Add the NuGet package, **Carousel.OrchardCore**, to the Orchard Core CMS Website. Launch the website and sign in as an administrator to enable the module from the dashboard under <i>Configuration</i> -> <i>Modules</i>.
 
-![Carousel.OrchardCore](https://github.com/davidhayden/Carousel/blob/master/assets/module.png)
+![Carousel.OrchardCore](https://github.com/davidhayden/Carousel/blob/master/assets/module.png?raw=true)
 
 Create a <em>Carousel Widget</em> in a Layer or as part of a Content Item that supports Flow. The editor provides access to all of the current Carousel settings as well as the ability to add slides.
 
-![Carousel.OrchardCore Widget Editor](https://github.com/davidhayden/Carousel/blob/master/assets/carousel-orchardcore-widget.png)
+![Carousel.OrchardCore Widget Editor](https://github.com/davidhayden/Carousel/blob/master/assets/carousel-orchardcore-widget.png?raw=true)
 
 After choosing the desired settings and adding the slides, navigate to the appropriate area of your website to view the carousel.
 
-![Bootstrap 4 Carousel](https://github.com/davidhayden/Carousel/blob/master/assets/bootstrap-4-carousel.png)
+![Bootstrap 4 Carousel](https://github.com/davidhayden/Carousel/blob/master/assets/bootstrap-4-carousel.png?raw=true)
 
 For more information on Bootstrap 4's Carousel, visit the [Bootstrap 4 documentation](https://getbootstrap.com).
 
