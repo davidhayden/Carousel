@@ -19,7 +19,8 @@ namespace Carousel.OrchardCore {
                 .WithField("Caption",
                     fieldBuilder => fieldBuilder
                         .OfType("HtmlField")
-                        .WithDisplayName("Caption"))
+                        .WithDisplayName("Caption")
+                        .WithEditor("Wysiwyg"))
                 .WithField("DisplayCaption",
                     fieldBuilder => fieldBuilder
                         .OfType("BooleanField")
