@@ -10,7 +10,7 @@ Carousel.OrchardCore is an Orchard Core CMS Module that creates a Boostrap 4 Car
 
 The module expects Bootstrap 4 to be used by the Orchard Core CMS website. The module does not come with Bootstrap 4 CSS and JS. Make sure your theme includes the necessary assets for the Carousel to look and work properly.
 
-Add the NuGet package, **Carousel.OrchardCore**, to the Orchard Core CMS Website. Launch the website and sign in as an administrator to enable the module from the dashboard under <i>Configuration</i> -> <i>Modules</i>.
+Add the NuGet package, **Carousel.OrchardCore**, to the Orchard Core CMS Website. Launch the website and sign in as an administrator to enable the module from the dashboard under <i>Configuration</i> -> <i>Features</i>.
 
 ![Carousel.OrchardCore](https://github.com/davidhayden/Carousel/blob/master/assets/module.png?raw=true)
 

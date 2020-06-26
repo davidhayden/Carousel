@@ -1,6 +1,9 @@
+#pragma warning disable 612, 618
+
 using OrchardCore.ContentManagement.Metadata;
 using OrchardCore.ContentManagement.Metadata.Settings;
 using OrchardCore.Data.Migration;
+using OrchardCore.Flows.Models;
 
 namespace Carousel.OrchardCore {
     public class Migrations : DataMigration {
@@ -95,8 +98,7 @@ namespace Carousel.OrchardCore {
                 .WithPart("Slides", "BagPart", cfg => cfg
                     .WithDisplayName("Slides")
                     .WithDescription("Slides to display in the carousel.")
-                    .WithSetting("ContainedContentTypes", new[] {"Slide"})
-                    .WithSetting("DisplayType", "Detail"))
+                    .WithSettings(new BagPartSettings { ContainedContentTypes = new[] { "Slide" }, DisplayType = "Detail" }))
                 .Stereotype("Widget"));
 
             return 1;

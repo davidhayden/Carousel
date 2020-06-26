@@ -6,7 +6,7 @@
         <RepositoryUrl>https://github.com/davidhayden/Carousel</RepositoryUrl>
         <PackageProjectUrl>https://github.com/davidhayden/Carousel</PackageProjectUrl>
         <PackageLicenseUrl>https://github.com/davidhayden/Carousel/blob/master/LICENSE</PackageLicenseUrl>
-        <TargetFramework>netstandard2.0</TargetFramework>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
         <VersionSuffix Condition="'$(VersionSuffix)'!='' AND '$(BuildNumber)' != ''">$(VersionSuffix)-$(BuildNumber)</VersionSuffix>
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
         <DebugType>embedded</DebugType>
