@@ -6,6 +6,6 @@ using OrchardCore.Modules.Manifest;
     Website = "https://www.davidhayden.me",
     Version = "1.0.0-rc2",
     Description = "Adds a Bootstrap 4 Carousel Widget.",
-    Dependencies = new[] {"OrchardCore.ContentFields", "OrchardCore.Flows", "OrchardCore.Widgets"},
+    Dependencies = new[] {"OrchardCore.ContentFields", "OrchardCore.Flows", "OrchardCore.Media", "OrchardCore.Widgets"},
     Category = "Content"
 )]

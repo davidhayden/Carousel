@@ -1,9 +1,9 @@
-#pragma warning disable 612, 618
-
+using OrchardCore.ContentFields.Settings;
 using OrchardCore.ContentManagement.Metadata;
 using OrchardCore.ContentManagement.Metadata.Settings;
 using OrchardCore.Data.Migration;
 using OrchardCore.Flows.Models;
+using OrchardCore.Media.Settings;
 
 namespace Carousel.OrchardCore {
     public class Migrations : DataMigration {
@@ -19,20 +19,16 @@ namespace Carousel.OrchardCore {
                 .WithField("Caption",
                     fieldBuilder => fieldBuilder
                         .OfType("HtmlField")
-                        .WithDisplayName("Caption")
-                        .WithSetting("Editor", "Wysiwyg"))
+                        .WithDisplayName("Caption"))
                 .WithField("DisplayCaption",
                     fieldBuilder => fieldBuilder
                         .OfType("BooleanField")
-                        .WithDisplayName("Display Caption")
-                        .WithSetting("Label", "Display Caption")
-                        .WithSetting("Editor", "Switch"))
+                        .WithDisplayName("Display Caption"))
                 .WithField("Image",
                     fieldBuilder => fieldBuilder
                         .OfType("MediaField")
                         .WithDisplayName("Image")
-                        .WithSetting("Required", "true")
-                        .WithSetting("Multiple", "false"))
+                        .WithSettings(new MediaFieldSettings { Required = true, Multiple = false}))
                 .WithField("ImageClass",
                     fieldBuilder => fieldBuilder
                         .OfType("TextField")
@@ -52,45 +48,31 @@ namespace Carousel.OrchardCore {
                     fieldBuilder => fieldBuilder
                         .OfType("NumericField")
                         .WithDisplayName("Interval")
-                        .WithSetting("Required", "true")
-                        .WithSetting("DefaultValue", "5000")
-                        .WithSetting("Hint", "Delay between slides (ms)"))
+                        .WithSettings(new NumericFieldSettings { Required = true, DefaultValue = "5000", Hint = "Delay between slides (ms)" }))
                 .WithField("IncludeControls",
                     fieldBuilder => fieldBuilder
                         .OfType("BooleanField")
-                        .WithDisplayName("Include Controls")
-                        .WithSetting("Label", "Include Controls")
-                        .WithSetting("Editor", "Switch"))
+                        .WithDisplayName("Include Controls"))
                 .WithField("IncludeIndicators",
                     fieldBuilder => fieldBuilder
                         .OfType("BooleanField")
-                        .WithDisplayName("Include Indicators")
-                        .WithSetting("Label", "Include Indicators")
-                        .WithSetting("Editor", "Switch"))
+                        .WithDisplayName("Include Indicators"))
                 .WithField("Ride",
                     fieldBuilder => fieldBuilder
                         .OfType("BooleanField")
-                        .WithDisplayName("Ride")
-                        .WithSetting("Label", "Autoplay")
-                        .WithSetting("Editor", "Switch"))
+                        .WithDisplayName("Autoplay"))
                 .WithField("Wrap",
                     fieldBuilder => fieldBuilder
                         .OfType("BooleanField")
-                        .WithDisplayName("Wrap")
-                        .WithSetting("Label", "Continuous")
-                        .WithSetting("Editor", "Switch"))
+                        .WithDisplayName("Continuous"))
                 .WithField("Keyboard",
                     fieldBuilder => fieldBuilder
                         .OfType("BooleanField")
-                        .WithDisplayName("Keyboard")
-                        .WithSetting("Label", "React to keyboard")
-                        .WithSetting("Editor", "Switch"))
+                        .WithDisplayName("React to keyboard"))
                 .WithField("Pause",
                     fieldBuilder => fieldBuilder
                         .OfType("BooleanField")
-                        .WithDisplayName("Pause")
-                        .WithSetting("Label", "Pause on hover/touch")
-                        .WithSetting("Editor", "Switch"))
+                        .WithDisplayName("Pause on hover/touch"))
             );
 
             _contentDefinitionManager.AlterTypeDefinition("Carousel", type => type

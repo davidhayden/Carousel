@@ -7,10 +7,12 @@
 
   <ItemGroup>
     <PackageReference Include="OrchardCore.Module.Targets" Version="1.0.0-rc2-13450" />
+    <PackageReference Include="OrchardCore.ContentFields" Version="1.0.0-rc2-13450" />
     <PackageReference Include="OrchardCore.ContentManagement.Abstractions" Version="1.0.0-rc2-13450" />
     <PackageReference Include="OrchardCore.Data.Abstractions" Version="1.0.0-rc2-13450" />
     <PackageReference Include="OrchardCore.DisplayManagement" Version="1.0.0-rc2-13450" />
     <PackageReference Include="OrchardCore.Flows" Version="1.0.0-rc2-13450" />
+    <PackageReference Include="OrchardCore.Media" Version="1.0.0-rc2-13450" />
   </ItemGroup>
 
 </Project>

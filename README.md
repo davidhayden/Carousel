@@ -36,6 +36,10 @@ See the Orchard Core Documentation for more information on [Templates](https://o
 
 There are no plans to add any additional features at this time.
 
+## Note
+
+Bug in Orchard Core 1.0.0-rc2 when displaying checkbox as a switch so modified to just use checkbox. [#3944](https://github.com/OrchardCMS/OrchardCore/issues/3944)
+
 ## Credits
 Carousel.OrchardCore is created and maintained by David Hayden.
 
